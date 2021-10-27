@@ -1,0 +1,190 @@
+
+/* CSS Reset */
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+
+
+/* Top Banner */
+
+.top-banner {
+    position: relative;
+    color: #444728
+}
+
+.top-banner .desktop-banner-img {
+    display: block;
+    width: 100%;
+}
+
+.top-banner .mobile-banner-img {
+    display: none;
+}
+
+.top-banner div h2 {
+    margin-bottom: -10px;
+}
+
+.top-banner div {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 6%;
+}
+
+.top-banner div p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25em;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.top-banner div h2 {
+    font-size: 2em;
+}
+
+.top-banner div .banner-font-1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.top-banner div .banner-font-2 {
+    font-family: 'Meie Script', cursive;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+
+@media only screen and (max-width: 1660px) {
+    .top-banner div {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .top-banner div h2 {
+        font-size: 1.7em;
+    }
+
+    .top-banner div p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .top-banner div {
+        left: 4%;
+    }
+
+    .top-banner div p {
+        font-size: .85em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .top-banner div {
+        width: 100%;
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        bottom: 15%;
+    }
+
+    .top-banner div h2 {
+        color: #ffffff;
+        font-size: 2.5em;
+    }
+
+    .top-banner .desktop-banner-img {
+        display: none;
+    }
+    
+    .top-banner .mobile-banner-img {
+        display: block;
+        width: 100%;
+    }
+
+    .top-banner div p {
+        display: none;
+    }
+}
+
+
+/* Quick Link Buttons */
+
+.quick-link-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.quick-link-btns a {
+    border: 2px solid #000;
+    padding: 15px;
+    width: 24%;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.quick-link-btns div h3 {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 1210px) {
+    .quick-link-btns div h3 {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .quick-link-btns div h3 {
+        font-size: .85em;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .quick-link-btns div h3 {
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .quick-link-btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    .quick-link-btns a {
+        width: 99%;
+    }
+
+    .quick-link-btns a:nth-of-type(odd) {
+        justify-self: end;
+    }
+
+    .quick-link-btns a:nth-of-type(even) {
+        justify-self: start;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .quick-link-btns div h3 {
+        letter-spacing: 0px;
+    }
+
+    .quick-link-btns div h3 {
+        font-size: .75em;
+    }
+}
