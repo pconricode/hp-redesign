@@ -23,11 +23,7 @@
     display: none;
 }
 
-.top-banner div h2 {
-    margin-bottom: -10px;
-}
-
-.top-banner div {
+.top-banner > div {
     width: 25%;
     position: absolute;
     top: 50%;
@@ -36,7 +32,11 @@
     left: 6%;
 }
 
-.top-banner div p {
+.top-banner > div h2 {
+    margin-bottom: -10px;
+}
+
+.top-banner > div p {
     font-family: 'Rubik', sans-serif;
     font-size: 1.25em;
     margin-top: 0px;
@@ -44,15 +44,15 @@
     line-height: 1.5em;
 }
 
-.top-banner div h2 {
+.top-banner > div h2 {
     font-size: 2em;
 }
 
-.top-banner div .banner-font-1 {
+.top-banner > div .banner-font-1 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.top-banner div .banner-font-2 {
+.top-banner > div .banner-font-2 {
     font-family: 'Meie Script', cursive;
 }
 
@@ -60,43 +60,75 @@
     white-space: nowrap;
 }
 
+/* Banner Button */
+
+.top-banner > div div {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #444728;;
+    margin-top: 20px;
+    width: 35%;
+}
+
+.top-banner > div div h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: center;
+    color: #444728;
+}
+
 
 
 @media only screen and (max-width: 1660px) {
-    .top-banner div {
+    .top-banner > div {
         width: 30%;
     }
 }
 
 @media only screen and (max-width: 1380px) {
-    .top-banner div h2 {
+    .top-banner > div h2 {
         font-size: 1.7em;
     }
 
-    .top-banner div p {
+    .top-banner > div p {
         font-size: 1em;
     }
 }
 
-@media only screen and (max-width: 875px) {
-    .top-banner div {
+@media only screen and (max-width: 1200px) {
+    .top-banner > div div {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .top-banner > div {
         left: 4%;
     }
 
-    .top-banner div p {
+    .top-banner > div p {
         font-size: .85em;
+    }
+
+    .top-banner > div p {
+        display: none;
+    }
+    
+    .top-banner > div div {
+        width: 75%;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .top-banner div {
+    .top-banner > div {
         width: 100%;
         -ms-transform: translateY(0%);
         transform: translateY(0%);
         bottom: 15%;
     }
 
-    .top-banner div h2 {
+    .top-banner > div h2 {
         color: #ffffff;
         font-size: 2.5em;
     }
@@ -110,8 +142,11 @@
         width: 100%;
     }
 
-    .top-banner div p {
-        display: none;
+    .top-banner > div div {
+        width: 40%;
+        border: 2px solid #ffffff;
+        background-color: rgba(255, 255, 255, .5);
+        margin-top: 0px;
     }
 }
 
@@ -187,4 +222,41 @@
     .quick-link-btns div h3 {
         font-size: .75em;
     }
+}
+
+
+/* Cut Above / Seasonal Bubbles */
+
+.cut-above {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 25px;
+}
+
+.cut-above > div:nth-of-type(1) img {
+    width: 100%;
+}
+
+.cut-above > div:nth-of-type(2) {
+    align-self: center;
+}
+
+.cut-above div:nth-of-type(2) .seasonal-btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    align-items: center;
+}
+
+.cut-above div:nth-of-type(2) .seasonal-btns img {
+    width: 75%;
+}
+
+
+/* Rope Divider */
+
+.rope-divider img {
+    display: block;
+    margin: 25px auto;
+    width: 100%;
 }
