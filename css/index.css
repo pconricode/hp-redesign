@@ -6,6 +6,30 @@
     display: revert;
   }
 
+  sub, sup {
+    /* Specified in % so that the sup/sup is the right size relative to the surrounding text */
+    font-size: 75%;
+  
+    /* Zero out the line-height so that it doesn't interfere with the positioning that follows */
+    line-height: 0;
+  
+    /* Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+    position: relative;
+  
+    /* Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule */
+    vertical-align: baseline;
+  }
+  
+  sup {
+    /* Move the superscripted text up */
+    top: -0.5em;
+  }
+  
+  sub {
+    /* Move the subscripted text down, but only half as far down as the superscript moved up */
+    bottom: -0.25em;
+  }
+
 
 /* Top Banner */
 
@@ -168,7 +192,7 @@
     box-sizing: border-box;
 }
 
-.quick-link-btns div h3 {
+.quick-link-btns a h3 {
     margin: 0px;
     text-align: center;
     font-family: 'Roboto Slab', serif;
@@ -176,19 +200,19 @@
 }
 
 @media only screen and (max-width: 1210px) {
-    .quick-link-btns div h3 {
+    .quick-link-btns a h3 {
         font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 1060px) {
-    .quick-link-btns div h3 {
+    .quick-link-btns a h3 {
         font-size: .85em;
     }
 }
 
 @media only screen and (max-width: 940px) {
-    .quick-link-btns div h3 {
+    .quick-link-btns a h3 {
         letter-spacing: 1px;
     }
 }
@@ -215,11 +239,11 @@
 }
 
 @media only screen and (max-width: 415px) {
-    .quick-link-btns div h3 {
+    .quick-link-btns a h3 {
         letter-spacing: 0px;
     }
 
-    .quick-link-btns div h3 {
+    .quick-link-btns a h3 {
         font-size: .75em;
     }
 }
@@ -257,6 +281,68 @@
 
 .rope-divider img {
     display: block;
-    margin: 25px auto;
+    margin: 50px auto;
     width: 100%;
+}
+
+/* Favorites + New */
+
+.favorites-new {
+    display: flex;
+    justify-content: space-around;
+}
+
+.favorites-new img {
+    width: 90%;
+}
+
+/* Headings */
+
+.heading-txt {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading-txt span {
+    font-size: 3em;
+}
+
+.heading-font-1 {
+    font-family: 'Italianno', cursive;
+}
+
+.heading-font-2 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+/* Product Bar */
+
+.product-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 95%;
+    column-gap: 50px;
+    margin: auto;
+}
+
+.product-bar .product-tile {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.product-bar .product-tile p:nth-of-type(1) {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5em;
+}
+
+.product-bar .product-tile p:nth-of-type(2) {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+}
+
+.product-bar .product-tile img {
+    width: 70%;
+    justify-self: center;
+    margin-bottom: 25px;
 }
