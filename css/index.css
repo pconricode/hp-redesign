@@ -322,13 +322,24 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 95%;
-    column-gap: 50px;
+    column-gap: 45px;
     margin: auto;
 }
 
 .product-bar .product-tile {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    padding: 15px;
+}
+
+.product-bar .product-tile:hover {
+    border: 1px solid #000;
+    padding: 14px;
+}
+
+.product-bar .product-tile > div:nth-of-type(1) {
+    text-align: center;
 }
 
 .product-bar .product-tile p:nth-of-type(1) {
@@ -338,11 +349,66 @@
 
 .product-bar .product-tile p:nth-of-type(2) {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.1em;
 }
 
 .product-bar .product-tile img {
     width: 70%;
     justify-self: center;
     margin-bottom: 25px;
+}
+
+
+/* FOTM + Monthly Contest */
+
+.fotm-contest {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.fotm-contest > div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.fotm-contest > div > div:nth-of-type(2) {
+    margin: 25px 0 0 25px ;
+}
+
+.fotm-contest > div > div:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+.fotm-contest > div > div:nth-of-type(2) span {
+    font-size: 2.75em;
+}
+
+.fotm-contest > div > div:nth-of-type(2) > div {
+    width: 70%;
+    margin-top: 25px;
+}
+
+.fotm-contest > div > div:nth-of-type(2) > div h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.fotm-contest > div > div:nth-of-type(2) > div p {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    margin-top: 20px;
+}
+
+.fotm-contest > div > div:nth-of-type(2) > div > div {
+    width: 60%;
+    margin: 25px auto auto auto;
+}
+
+.fotm-contest > div > div:nth-of-type(2) > div > div h3 {
+    font-size: 1.25em;
 }
