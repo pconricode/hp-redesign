@@ -375,11 +375,7 @@
 }
 
 .fotm-contest > div > div:nth-of-type(2) {
-    margin: 25px 0 0 25px ;
-}
-
-.fotm-contest > div > div:nth-of-type(2) {
-    margin-bottom: 30px;
+    margin: 25px 0 30px 25px ;
 }
 
 .fotm-contest > div > div:nth-of-type(2) span {
@@ -411,4 +407,87 @@
 
 .fotm-contest > div > div:nth-of-type(2) > div > div h3 {
     font-size: 1.25em;
+}
+
+
+/* CAL Pickup & Rewards */
+
+.pickup_rewards {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.pickup_rewards > div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.pickup_rewards > div > div h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.pickup_rewards > div > div p {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin-top: 20px;
+}
+
+.pickup_rewards > div > div {
+    width: 70%;
+    margin: 25px 0 30px 25px;
+}
+
+.pickup_rewards > div > div > a {
+    display: block;
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.25em;
+    width: 60%;
+    margin: 25px auto auto auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.pickup_rewards > div > div > a:hover {
+    border: 1px solid #000;
+    margin: 24px auto auto auto;
+}
+
+
+/* Events & Blogs */
+
+.events_blogs {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+}
+
+.events_blogs > div {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-width: 345px;
+}
+
+.events_blogs > div > div {
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-top: none;
+}
+
+.events_blogs > div > div > h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.4em;
+    line-height: 1em;
+    margin-top: 15px;
+}
+
+.events_blogs > div > div > p {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin-top: 15px;
 }
